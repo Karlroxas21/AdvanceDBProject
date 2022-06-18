@@ -1,0 +1,21 @@
+-Single SQL Queries
+-SQL with WHERE condition
+-SQL Compound Conditions(AND,OR.NOT)
+-SQL Computed Fields
+-SQL WHERE Application with a Range Search
+-SQL WHERE Application with a Pattern Search
+-Using LIKE Operator
+-Using IN Operator
+-Using Sorting Queries
+-SQL GROUP BY and HAVING Application
+-Using SQL Functions (AVG, Sum, Max, Min, Count, Rollup)
+-Joining Two Tables
+-Joining Multiple Tables
+-Alter Table Structure
+-Creating New Table in Existing Table
+-Insert New Data to the New Table
+-Delete data to the New Table
+-Update Data to the New Table
+
+*DISPLAY THE SQL CODE AND THE RESULTS
+*MIN OF 2 QUERIES PER ITEM

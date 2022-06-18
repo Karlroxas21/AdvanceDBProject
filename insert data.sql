@@ -105,26 +105,32 @@ values((select BarberID from Barber where BarberID=10),
 (select ServiceID from Service where ServiceID=5),
 (select CustomerID from Customer where CustomerID=2),
 '17-JUNE-2022', 'Cash', 500, 
-(500-(select Price from Service where ServiceID=5)),
-(select Price from Service where ServiceID=5));
+(500-(select Price from Service where ServiceID=5)-
+(select Rate from Barber where BarberID=10)),
+(select Price from Service where ServiceID=5)+
+(select Rate from Barber where BarberID=10));
 --
 insert into Sales(BarberID, ServiceID, CustomerID, Date,
 PaymentDesc, Received, Change, Total)
 values((select BarberID from Barber where BarberID=11),
 (select ServiceID from Service where ServiceID=10),
 (select CustomerID from Customer where CustomerID=4),
-'17-JUNE-2022', 'Cash', 200, 
-(200-(select Price from Service where ServiceID=10)),
-(select Price from Service where ServiceID=10));
+'17-JUNE-2022', 'Cash', 600, 
+(600-(select Price from Service where ServiceID=10)-
+(select Rate from Barber where BarberID=11)),
+(select Price from Service where ServiceID=10)+
+(select Rate from Barber where BarberID=11));
 --
 insert into Sales(BarberID, ServiceID, CustomerID, Date,
 PaymentDesc, Received, Change, Total)
 values((select BarberID from Barber where BarberID=12),
 (select ServiceID from Service where ServiceID=15),
 (select CustomerID from Customer where CustomerID=6),
-'17-JUNE-2022', 'Cash', 200, 
-(200-(select Price from Service where ServiceID=15)),
-(select Price from Service where ServiceID=15));
+'17-JUNE-2022', 'Cash', 600, 
+(600-(select Price from Service where ServiceID=15)-
+(select Rate from Barber where BarberID=12)),
+(select Price from Service where ServiceID=15)+
+(select Rate from Barber where BarberID=12));
 --
 insert into Sales(BarberID, ServiceID, CustomerID, Date,
 PaymentDesc, Received, Change, Total)
@@ -132,44 +138,54 @@ values((select BarberID from Barber where BarberID=13),
 (select ServiceID from Service where ServiceID=20),
 (select CustomerID from Customer where CustomerID=8),
 '17-JUNE-2022', 'Cash', 1000, 
-(1000-(select Price from Service where ServiceID=20)),
-(select Price from Service where ServiceID=20));
+(1000-(select Price from Service where ServiceID=20)-
+(select Rate from Barber where BarberID=13)),
+(select Price from Service where ServiceID=20)+
+(select Rate from Barber where BarberID=13));
 --
 insert into Sales(BarberID, ServiceID, CustomerID, Date,
 PaymentDesc, Received, Change, Total)
 values((select BarberID from Barber where BarberID=14),
 (select ServiceID from Service where ServiceID=25),
 (select CustomerID from Customer where CustomerID=10),
-'17-JUNE-2022', 'Cash', 300, 
-(300-(select Price from Service where ServiceID=25)),
-(select Price from Service where ServiceID=25));
+'17-JUNE-2022', 'Cash', 500, 
+(500-(select Price from Service where ServiceID=25)-
+(select Rate from Barber where BarberID=14)),
+(select Price from Service where ServiceID=25)+
+(select Rate from Barber where BarberID=14));
 --
 insert into Sales(BarberID, ServiceID, CustomerID, Date,
 PaymentDesc, Received, Change, Total)
 values((select BarberID from Barber where BarberID=15),
 (select ServiceID from Service where ServiceID=30),
 (select CustomerID from Customer where CustomerID=12),
-'17-JUNE-2022', 'Cash', 100, 
-(100-(select Price from Service where ServiceID=30)),
-(select Price from Service where ServiceID=30));
+'17-JUNE-2022', 'Cash', 500, 
+(500-(select Price from Service where ServiceID=30)-
+(select Rate from Barber where BarberID=15)),
+(select Price from Service where ServiceID=30)+
+(select Rate from Barber where BarberID=15));
 --
 insert into Sales(BarberID, ServiceID, CustomerID, Date,
 PaymentDesc, Received, Change, Total)
 values((select BarberID from Barber where BarberID=16),
 (select ServiceID from Service where ServiceID=35),
 (select CustomerID from Customer where CustomerID=14),
-'17-JUNE-2022', 'Cash', 150, 
-(150-(select Price from Service where ServiceID=35)),
-(select Price from Service where ServiceID=35));
+'17-JUNE-2022', 'Cash', 500, 
+(500-(select Price from Service where ServiceID=35)-
+(select Rate from Barber where BarberID=16)),
+(select Price from Service where ServiceID=35)+
+(select Rate from Barber where BarberID=16));
 --
 insert into Sales(BarberID, ServiceID, CustomerID, Date,
 PaymentDesc, Received, Change, Total)
 values((select BarberID from Barber where BarberID=17),
 (select ServiceID from Service where ServiceID=40),
 (select CustomerID from Customer where CustomerID=16),
-'17-JUNE-2022', 'Cash', 500, 
-(500-(select Price from Service where ServiceID=40)),
-(select Price from Service where ServiceID=40));
+'17-JUNE-2022', 'Cash', 1000, 
+(1000-(select Price from Service where ServiceID=40)-
+(select Rate from Barber where BarberID=17)),
+(select Price from Service where ServiceID=40)+
+(select Rate from Barber where BarberID=17));
 --
 insert into Sales(BarberID, ServiceID, CustomerID, Date,
 PaymentDesc, Received, Change, Total)
@@ -177,21 +193,26 @@ values((select BarberID from Barber where BarberID=22),
 (select ServiceID from Service where ServiceID=45),
 (select CustomerID from Customer where CustomerID=18),
 '17-JUNE-2022', 'Cash', 1000, 
-(700-(select Price from Service where ServiceID=45)),
-(select Price from Service where ServiceID=45));
+(1000-(select Price from Service where ServiceID=45)-
+(select Rate from Barber where BarberID=22)),
+(select Price from Service where ServiceID=45)+
+(select Rate from Barber where BarberID=22));
 --
 insert into Sales(BarberID, ServiceID, CustomerID, Date,
 PaymentDesc, Received, Change, Total)
 values((select BarberID from Barber where BarberID=23),
 (select ServiceID from Service where ServiceID=50),
 (select CustomerID from Customer where CustomerID=20),
-'17-JUNE-2022', 'Cash', 1000, 
-(950-(select Price from Service where ServiceID=50)),
-(select Price from Service where ServiceID=50));
+'17-JUNE-2022', 'Cash', 1500, 
+(1500-(select Price from Service where ServiceID=50)-
+(select Rate from Barber where BarberID=23)),
+(select Price from Service where ServiceID=50)+
+(select Rate from Barber where BarberID=23));
 
 select * from Barber
 select * from Customer
 select * from Service
 select * from Sales
+
 
 
