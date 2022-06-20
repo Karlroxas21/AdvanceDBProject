@@ -56,3 +56,23 @@ where Street IN ('Baker', 'Elegante', 'Aquino');\
 
 
 --Using Sorting Queries
+
+--SQL Group by and Having application
+
+--Using SQL Functions (AVG, Sum, Max, Min, Count, Rollup)
+
+--Joining Two Tables
+
+--Joining Multiple Tables
+
+--Alter table structure
+
+--Creating new table in existing table
+
+--Insert new data to the new table
+
+--Delete data to the new Table
+
+--Update data to to new table
+
+--**DISPLAY THE SQL CODE AND RESULTS, AND MIN. OF 2 Queries PER ITEM**
