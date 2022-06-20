@@ -54,10 +54,21 @@ where City IN ('Manila', 'Taguig');
 select * from Barber
 where Street IN ('Baker', 'Elegante', 'Aquino');\
 
-
 --Using Sorting Queries
+select * from Service
+order by Price
+select * from Service
+order by  Price desc
+select * from Service
+order by Description
 
 --SQL Group by and Having application
+select BarberID, count(Date) as TotalCustomerToday from Sales
+group by BarberID
+having sum(total) >0
+select ServiceID, sum(Price) as ServiceGreaterThanEqual500 from Service 
+group by ServiceID
+having sum(Price) >=500
 
 --Using SQL Functions (AVG, Sum, Max, Min, Count, Rollup)
 
