@@ -83,7 +83,7 @@ order by Description		 --Display all values in service in Description a-z
 --KARL
 select BarberID, count(ReceiptNum) as AllTotalCustomer from Sales
 group by BarberID
-having sum(total) >0		--In there time in barbershop, how many barbers served customers? and make a new column for the AllTotalCustomer
+having sum(total) >0		--In there time in barbershop, how many barbers served customers? and make a new column for the All
 select ServiceID, sum(Price) as ServiceGreaterThanEqual500 from Service 
 group by ServiceID
 having sum(Price) >=500		--List the ServiceID if the Service cost greater than or equal to 500 and make a new column for the price
